@@ -17,7 +17,7 @@ class App extends Component {
         </div>
         <div className="panel-body">
           <AddTodo onSave={this.saveItem.bind(this)}/>
-          <TodoList todos={this.props.todos}/>
+          <TodoList todos={this.props.todos} onDeleteItem={(index) => this.deleteItem(index)} />
         </div>
         <div className="panel-footer">
         </div>
@@ -27,6 +27,10 @@ class App extends Component {
   
   saveItem (text) {
     this.dispatch(addTodo(text))
+  }
+  
+  deleteItem (index) {
+    this.dispatch(deleteTodo(index))
   }
 } 
 

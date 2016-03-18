@@ -13,10 +13,14 @@ export default class TodoList extends Component {
             <Todo key={index} 
             index={index}
             text={todo.text}
-            done={todo.done} />
+            done={todo.done} 
+            deleteItem={(index) => this.deleteItem(index)} />
           )}
         </ul>
       </div>
     )
+  }
+  deleteItem (index) {
+    this.props.onDeleteItem(index)
   }
 }

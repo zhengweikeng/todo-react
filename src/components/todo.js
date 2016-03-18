@@ -26,6 +26,6 @@ export default class Todo extends Component {
   }
   
   handleDelete (e, index) {
-    console.log(index)
+    this.props.deleteItem(index)
   }
 }

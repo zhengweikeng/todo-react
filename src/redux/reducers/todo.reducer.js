@@ -8,12 +8,17 @@ const todoApp = (state = initState, action) => {
     case todo.ADD_TODO:
       return {
         items: [...state.items, {
-          text: action.text,
+          text: action.value,
           done: false      
         }]
       }
     case todo.DELETE_TODO:
-      return
+      return {
+        items: [
+          ...state.items.slice(0, action.value),
+          ...state.items.slice(action.value+1)
+        ]
+      }
     case todo.EDIT_TODO:
       return
     case todo.UPDATE_TODO_STATE:
