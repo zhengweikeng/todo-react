@@ -7,4 +7,10 @@ const todo = {
   CLEAR_ALL_TODO: 'CLEAR_ALL_TODO'
 }
 
-export {todo}
+const filter = {
+  ALL: 'ALL',
+  COMPLETE: 'COMPLETE',
+  ACTIVE: 'ACTIVE'
+}
+
+export {todo, filter}
