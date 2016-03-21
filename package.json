@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"rm -rf build && NODE_ENV=production ./node_modules/.bin/webpack --progress --hide-modules --history-api-fallback --config webpack.prod.config.js",
     "dev": "./node_modules/.bin/webpack-dev-server --progress --history-api-fallback --config webpack.dev.config.js"
   },
   "author": "Wayne Zheng",
@@ -34,6 +35,7 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.14",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.8.4"
   }
 }

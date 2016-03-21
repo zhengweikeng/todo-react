@@ -38,3 +38,6 @@ node_modules
 # vscode
 typings
 .vscode
+
+# webpack build
+build
